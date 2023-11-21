@@ -1,0 +1,35 @@
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Inter" , sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+  color:$color-text-dark;
+}
+
+.nav {
+  display: flex;
+}
+.nav__list{
+  display: flex;
+
+  gap: 40px;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__link {
+  color:$color-text-dark;
+}
+
+.header__menu-link {
+  display: flex;
+  align-items:center;
+  gap:8px;
+  padding-bottom: 10px;
+}

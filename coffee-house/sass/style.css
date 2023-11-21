@@ -14,12 +14,64 @@ a {
   text-decoration: none;
 }
 
+ul {
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background: #E1D4C9;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1360px;
+  }
+}
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+  color: #403F3D;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__link {
+  color: #403F3D;
+}
+
+.header__menu-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

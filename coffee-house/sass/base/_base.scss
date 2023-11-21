@@ -15,11 +15,17 @@
 a {
   text-decoration: none;
 }
-
+ul {
+  padding: 0;
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background: $color-background-body;
 }
+
