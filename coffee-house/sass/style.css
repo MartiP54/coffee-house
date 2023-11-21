@@ -10,5 +10,16 @@
   font-style: normal;
   font-weight: 600;
 }
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+}
 
 /*# sourceMappingURL=style.css.map */
