@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Inter";
+  src: url(/martip54-JSFE2023Q4/coffee-house/assets/fonts/Inter-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(/martip54-JSFE2023Q4/coffee-house/assets/fonts/Inter-Bold.ttf);
+  font-style: normal;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background: $color-background-body;
+}
+
