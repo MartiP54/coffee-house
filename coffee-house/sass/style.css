@@ -10,8 +10,25 @@
   font-style: normal;
   font-weight: 600;
 }
+@font-face {
+  font-family: "Inter";
+  src: url(/martip54-JSFE2023Q4/coffee-house/assets/fonts/Inter-Italic.ttf);
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(/martip54-JSFE2023Q4/coffee-house/assets/fonts/Inter-BoldItalic.ttf);
+  font-style: italic;
+  font-weight: 600;
+}
 a {
   text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 ul {
@@ -29,6 +46,18 @@ body {
   background: #E1D4C9;
 }
 
+h1 {
+  font-size: 72px;
+  line-height: 105%;
+  margin: 0;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 125%;
+  margin: 0;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -42,6 +71,7 @@ body {
 .header__menu {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 14px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 16px;
@@ -72,6 +102,59 @@ body {
   align-items: center;
   gap: 8px;
   padding-bottom: 10px;
+}
+
+.enjoy__background {
+  background: url(../../../../martip54-JSFE2023Q4/coffee-house/assets/img/img-hero.png) no-repeat;
+  border-radius: 40px;
+  background-size: cover;
+  background-position: center;
+  width: 1360px;
+  height: 644px;
+}
+
+.enjoy__offer {
+  display: flex;
+  flex-direction: column;
+  width: 530px;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 40px;
+  padding: 100px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: #E1D4C9;
+}
+
+.enjoy__accent {
+  color: #B0907A;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 105%;
+}
+
+.enjoy__p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.enjoy__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 78px;
+  width: 45px;
+  border-radius: 100px;
+  background: #E1D4C9;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  color: #403F3D;
 }
 
 /*# sourceMappingURL=style.css.map */

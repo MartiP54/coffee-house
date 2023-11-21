@@ -12,8 +12,26 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url(/martip54-JSFE2023Q4/coffee-house/assets/fonts/Inter-Italic.ttf);
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(/martip54-JSFE2023Q4/coffee-house/assets/fonts/Inter-BoldItalic.ttf);
+  font-style: italic;
+  font-weight: 600;
+}
+
 a {
   text-decoration: none;
+}
+p {
+  padding: 0;
+  margin: 0;
 }
 ul {
   padding: 0;
@@ -28,4 +46,14 @@ body {
   padding-bottom: 40px;
   background: $color-background-body;
 }
+h1 {
+  font-size: 72px;
+  line-height: 105%;
+  margin: 0;
+}
 
+h2 {
+  font-size: 60px;
+  line-height: 125%;
+  margin: 0;
+}

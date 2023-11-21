@@ -1,0 +1,58 @@
+.enjoy__background {
+  background: url(../../../../martip54-JSFE2023Q4/coffee-house/assets/img/img-hero.png) no-repeat;
+  border-radius: 40px;
+  background-size:cover;
+  background-position:center;
+  width: 1360px;
+  height: 644px;
+}
+
+.enjoy__offer {
+  display: flex;
+  flex-direction: column;
+  width: 530px;
+  justify-content: center;
+  align-items:flex-start;
+  align-self:stretch;
+  gap: 40px;
+
+  padding: 100px;
+
+  font-family: "Inter" , sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color:$color-text-light;
+}
+
+.enjoy__accent{
+  color:$color-text-accent;
+  font-family: "Inter" , sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 105%;
+}
+
+.enjoy__p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.enjoy__button {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding: 20px 78px;
+
+  width: 45px;
+  border-radius: 100px;
+
+  background:$color-background-body;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  color:$color-text-dark;
+}
+
