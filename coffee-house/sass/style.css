@@ -30,6 +30,10 @@ p {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 ul {
@@ -52,13 +56,18 @@ h1 {
   font-size: 72px;
   line-height: 105%;
   margin: 0;
+  letter-spacing: -0.5px;
 }
 
 h2 {
   font-family: "Inter", sans-serif;
   font-size: 60px;
+  font-weight: 600;
   line-height: 125%;
+  font-style: normal;
   margin: 0;
+  color: #403F3D;
+  letter-spacing: -0.25px;
 }
 
 h3 {
@@ -114,6 +123,79 @@ h3 {
   padding-bottom: 10px;
 }
 
+#footer {
+  padding-top: 96px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #665F55;
+  border-radius: 40px;
+  background-size: cover;
+  background-position: center;
+  color: #E1D4C9;
+}
+
+.footer__slogans {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1 0 0;
+  padding: 98px 0px 100px 100px;
+}
+
+.footer__h2 {
+  color: #E1D4C9;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid #C1B6AD;
+}
+
+.footer__contact {
+  padding-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 38px;
+  flex: 1 0 0;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact__map,
+.contact__tel,
+.contact__time {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
 #about {
   padding-top: 98px;
 }
@@ -122,13 +204,6 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
-
-.about__h2 {
-  align-self: stretch;
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: -0.25px;
 }
 
 .about__gallery {
@@ -149,7 +224,7 @@ h3 {
 .img-3,
 .img-4 {
   border-radius: 20px;
-  width: 660px;
+  max-width: 660px;
   overflow: hidden;
 }
 
@@ -185,8 +260,6 @@ h3 {
   border-radius: 40px;
   background-size: cover;
   background-position: center;
-  width: 1360px;
-  height: 644px;
 }
 
 .enjoy__offer {
@@ -197,7 +270,7 @@ h3 {
   align-items: flex-start;
   align-self: stretch;
   gap: 40px;
-  padding: 100px;
+  padding: 100.5px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -246,12 +319,6 @@ h3 {
   align-self: stretch;
 }
 
-.favourites-coffe__text {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-}
-
 .favourites-coffee__carousels {
   display: flex;
   align-items: center;
@@ -281,6 +348,15 @@ h3 {
   color: #403F3D;
 }
 
+.carousels__picture-container {
+  max-width: 480px;
+  max-height: 480px;
+}
+
+.carousels__picture {
+  width: 100%;
+}
+
 .carousels__descript {
   text-align: center;
   font-size: 16px;
@@ -304,6 +380,73 @@ h3 {
 
 #control-active {
   background: #665F55;
+}
+
+#mobile-app {
+  padding-top: 100px;
+}
+
+.mobile-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex: 1 0 0;
+}
+
+.mobile-app__img-container {
+  max-width: 930px;
+  max-height: 930px;
+}
+
+.mobile-app__img {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-app__text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 3px;
+  max-width: 630px;
+}
+
+.mobile-app__button {
+  display: flex;
+  gap: 20px;
+}
+
+.mobile-app__apple-button,
+.mobile-app__android-button {
+  display: flex;
+  width: 160px;
+  padding: 12px 19px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid #665F55;
+  color: #403F3D;
+}
+
+.mobile-app__icon {
+  fill: #403F3D;
+}
+
+.mobile-app__button-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-app__button-textup {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.mobile-app__button-textdown {
+  font-weight: 600;
+  line-height: 150%;
 }
 
 /*# sourceMappingURL=style.css.map */

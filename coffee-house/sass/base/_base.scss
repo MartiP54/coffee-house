@@ -33,6 +33,10 @@ p {
   padding: 0;
   margin: 0;
   font-family: "Inter" , sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
 ul {
   padding: 0;
@@ -52,13 +56,18 @@ h1 {
   font-size: 72px;
   line-height: 105%;
   margin: 0;
+  letter-spacing: -0.5px;
 }
 
 h2 {
   font-family: "Inter" , sans-serif;
   font-size: 60px;
+  font-weight: 600;
   line-height: 125%;
+  font-style: normal;
   margin: 0;
+  color:$color-text-dark;
+  letter-spacing: -0.25px;
 }
 
 h3 {

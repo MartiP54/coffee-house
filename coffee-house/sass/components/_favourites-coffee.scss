@@ -11,16 +11,10 @@
   align-self:stretch;
 }
 
-.favourites-coffe__text {
-  font-family: "Inter" , sans-serif;
-  font-style: normal;
-  font-weight: 600;
-}
 
 .favourites-coffee__carousels {
   display: flex;
   align-items:center;
-
   gap: 375px;
 
   max-width: 100%;
@@ -50,6 +44,15 @@
 
   color:$color-text-dark;
 
+}
+
+.carousels__picture-container {
+  max-width: 480px;
+  max-height: 480px;
+}
+
+.carousels__picture {
+  width: 100%;
 }
 
 .carousels__descript {
