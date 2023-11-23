@@ -49,15 +49,33 @@
   border: 1px solid $color-border-dark;
 
   color:$color-text-dark;
+  transition: background 0.7s;
+}
+
+.mobile-app__apple-button:hover,
+.mobile-app__android-button:hover {
+  background:$color-background-container;
+}
+
+.mobile-app__apple-button:hover .mobile-app__icon,
+.mobile-app__android-button:hover .mobile-app__icon {
+  fill: $color-text-light;
+}
+
+.mobile-app__apple-button:hover .mobile-app__button-text,
+.mobile-app__android-button:hover .mobile-app__button-text {
+  color: $color-text-light;
 }
 
 .mobile-app__icon {
   fill: $color-text-dark;
+  transition: fill 1s;
 }
 
 .mobile-app__button-text {
   display: flex;
   flex-direction: column;
+  transition: color 1s;
 }
 
 .mobile-app__button-textup {

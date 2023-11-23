@@ -31,6 +31,27 @@
   height: 60px;
   border-radius:100px;
   border: 1px solid $color-border-dark;
+
+  transition: background 0.7s;
+}
+
+.carousels__left-button:hover ,
+.carousels__right-button:hover {
+  background:$color-background-container;
+}
+
+.carousels__right-button:hover {
+  cursor: pointer;
+}
+
+
+.carousels__left-button:hover .arrow-left,
+.carousels__right-button:hover .arrow-right{
+  stroke:$color-border-light;
+}
+.arrow-left,
+.arrow-right {
+  stroke:$color-text-dark;
 }
 
 .carousels__cart {

@@ -24,8 +24,13 @@
   height: 100%;
   object-fit: cover;
   scale: 1.1;
-
+  transition: scale 0.7s;
 }
+
+.gallery__box :hover {
+  scale: 1;
+}
+
 .img-1,
 .img-2,
 .img-3,

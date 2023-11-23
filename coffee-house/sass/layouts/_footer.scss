@@ -43,6 +43,8 @@
 
   border-radius: 100px;
   border: 1px solid $color-border-light;
+
+  transition: background 0.7s;
 }
 
 .footer__contact {
@@ -75,4 +77,17 @@
   font-weight: 600;
   line-height: 150%;
   color: $color-text-light;
+}
+
+.footer__svg {
+  stroke: $color-border-light;
+  transition: stroke 1s;
+}
+
+.footer__icon:hover .footer__svg {
+  stroke: $color-text-dark;
+}
+
+.footer__icon:hover {
+  background: $color-background-body;
 }

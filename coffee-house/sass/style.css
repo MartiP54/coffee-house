@@ -164,6 +164,7 @@ h3 {
   align-items: center;
   border-radius: 100px;
   border: 1px solid #C1B6AD;
+  transition: background 0.7s;
 }
 
 .footer__contact {
@@ -197,6 +198,19 @@ h3 {
   color: #E1D4C9;
 }
 
+.footer__svg {
+  stroke: #C1B6AD;
+  transition: stroke 1s;
+}
+
+.footer__icon:hover .footer__svg {
+  stroke: #403F3D;
+}
+
+.footer__icon:hover {
+  background: #E1D4C9;
+}
+
 #about {
   padding-top: 98px;
 }
@@ -218,6 +232,11 @@ h3 {
   height: 100%;
   object-fit: cover;
   scale: 1.1;
+  transition: scale 0.7s;
+}
+
+.gallery__box :hover {
+  scale: 1;
 }
 
 .img-1,
@@ -337,6 +356,26 @@ h3 {
   height: 60px;
   border-radius: 100px;
   border: 1px solid #665F55;
+  transition: background 0.7s;
+}
+
+.carousels__left-button:hover,
+.carousels__right-button:hover {
+  background: #665F55;
+}
+
+.carousels__right-button:hover {
+  cursor: pointer;
+}
+
+.carousels__left-button:hover .arrow-left,
+.carousels__right-button:hover .arrow-right {
+  stroke: #C1B6AD;
+}
+
+.arrow-left,
+.arrow-right {
+  stroke: #403F3D;
 }
 
 .carousels__cart {
@@ -428,15 +467,33 @@ h3 {
   border-radius: 100px;
   border: 1px solid #665F55;
   color: #403F3D;
+  transition: background 0.7s;
+}
+
+.mobile-app__apple-button:hover,
+.mobile-app__android-button:hover {
+  background: #665F55;
+}
+
+.mobile-app__apple-button:hover .mobile-app__icon,
+.mobile-app__android-button:hover .mobile-app__icon {
+  fill: #E1D4C9;
+}
+
+.mobile-app__apple-button:hover .mobile-app__button-text,
+.mobile-app__android-button:hover .mobile-app__button-text {
+  color: #E1D4C9;
 }
 
 .mobile-app__icon {
   fill: #403F3D;
+  transition: fill 1s;
 }
 
 .mobile-app__button-text {
   display: flex;
   flex-direction: column;
+  transition: color 1s;
 }
 
 .mobile-app__button-textup {
