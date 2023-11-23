@@ -32,6 +32,7 @@ a {
 p {
   padding: 0;
   margin: 0;
+  font-family: "Inter" , sans-serif;
 }
 ul {
   padding: 0;
@@ -47,13 +48,22 @@ body {
   background: $color-background-body;
 }
 h1 {
+  font-family: "Inter" , sans-serif;
   font-size: 72px;
   line-height: 105%;
   margin: 0;
 }
 
 h2 {
+  font-family: "Inter" , sans-serif;
   font-size: 60px;
+  line-height: 125%;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Inter" , sans-serif;
+  font-size: 24px;
   line-height: 125%;
   margin: 0;
 }
