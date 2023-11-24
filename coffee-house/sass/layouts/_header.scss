@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 14px;
+  align-items:center;
 
   font-family: "Inter" , sans-serif;
   font-style: normal;
@@ -16,8 +17,9 @@
 }
 .nav__list{
   display: flex;
-
   gap: 40px;
+  margin-top: 7px;
+
 }
 
 .nav__item {
@@ -26,11 +28,38 @@
 
 .nav__link {
   color:$color-text-dark;
+  
 }
 
 .header__menu-link {
   display: flex;
   align-items:center;
   gap:8px;
-  padding-bottom: 10px;
+}
+
+.menu-link__container {
+  margin-top: -7px;
+}
+
+.border_nav {
+  opacity: 0;
+  display: block;
+  border: 2px solid $color-text-dark;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  transition: opacity 0.7s ease;
+  width: 0;
+  transition: 0.7s;
+}
+
+
+.nav__item:hover .border_nav {
+  opacity: 1;
+  width: 100%;
+}
+
+.menu-link__container:hover .border_nav{
+  opacity: 1;
+  width: 100%;
 }

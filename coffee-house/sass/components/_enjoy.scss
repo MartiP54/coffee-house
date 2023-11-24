@@ -55,3 +55,14 @@
   color:$color-text-dark;
 }
 
+.enjoy__button:hover .enjoy__cup {
+  opacity: 1;
+  padding-left: 24px;
+  
+}
+.enjoy__cup {
+  opacity: 0;
+  margin-left: -17px;
+  transition: 0.7s;
+}
+
