@@ -40,7 +40,8 @@
   background:$color-background-container;
 }
 
-.carousels__right-button:hover {
+.carousels__right-button:hover,
+.carousels__left-button:hover {
   cursor: pointer;
 }
 
