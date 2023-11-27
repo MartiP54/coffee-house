@@ -1,9 +1,12 @@
 // header //
 
 .border_nav-menu {
-  opacity: 1;
-  width: 100%;
-}
+    display: block;
+    border: 2px solid $color-text-dark;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
 
 .h1__menu {
   font-size: 60px;
