@@ -91,3 +91,30 @@
 .footer__icon:hover {
   background: $color-background-body;
 }
+
+.link__animation {
+  position: relative;
+}
+.link__animation:after {
+
+  position: absolute;
+  content: '';
+  bottom: -5px;
+  height: 2px;
+  background: $color-text-light;
+
+  opacity: 0;
+  width: 0;
+  
+  transition: 1s;
+  left: 50%;
+  transform: translate(-50%);
+ 
+}
+
+.link__animation:hover:after {
+  opacity: 1;
+  width: 100%;
+}
+
+

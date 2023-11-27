@@ -1,9 +1,12 @@
 // header //
 
 .border_nav-menu {
-  opacity: 1;
-  width: 100%;
-}
+    display: block;
+    border: 2px solid $color-text-dark;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
 
 .h1__menu {
   font-size: 60px;
@@ -47,6 +50,17 @@
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
+  transition: 0.7s;
+}
+
+.tabs__item:hover {
+  cursor:pointer;
+  background:$color-background-container;
+  color:$color-text-light;
+}
+
+.tabs__item:hover .icon__box {
+  background: $color-background-body;
 }
 
 .tabs__item-active {
@@ -54,6 +68,9 @@
   color:$color-text-light;
 }
 
+.tabs__item-active:hover {
+  cursor:default;
+}
 
 .icon__box {
   display: flex;
@@ -62,6 +79,7 @@
   align-items:center;
   border-radius:100px;
   background: $color-border-light;
+  transition: 0.9s;
 }
 
 .icon__box-active {
@@ -96,7 +114,14 @@ flex-wrap: wrap;
   width: 100%;
   height: 100%;
   scale: 1.1;
-  
+  transition: scale 0.7s;
+}
+
+.gallery__item:hover {
+  cursor: pointer;
+}
+.gallery__item:hover .gallery-menu__image{
+  scale: 1;
 }
 
 .item__title{
