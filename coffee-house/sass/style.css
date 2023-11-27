@@ -570,7 +570,8 @@ h3 {
   background: #665F55;
 }
 
-.carousels__right-button:hover {
+.carousels__right-button:hover,
+.carousels__left-button:hover {
   cursor: pointer;
 }
 
