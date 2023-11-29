@@ -148,6 +148,44 @@ flex-wrap: wrap;
   color:$color-text-dark;
 }
 
+.menu__refresh-icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border:1px solid $color-border-dark;
+}
+
 #menu__footer {
   margin: 98px;
+}
+
+
+
+@media screen and (max-width: 769px) {
+  .menu br{
+    display: none;
+  }
+  .menu {
+    padding: 0px 10px;
+  }
+  .gallery__item-nodisplay {
+    display: none;
+  }
+  #menu__footer {
+    margin:0;
+    margin-top: 97px;
+  }
+}
+
+
+
+@media screen and (min-width: 769px) {
+  .menu__refresh-icon  {
+     display: none !important;
+  }
+
+ 
 }
