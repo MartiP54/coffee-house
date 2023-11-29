@@ -77,7 +77,16 @@ h3 {
   margin: 0;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 50px;
+    line-height: 115%;
+  }
+  h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
   h1 {
     font-size: 42px;
     line-height: 115%;
@@ -206,7 +215,6 @@ h3 {
   }
   .hamburger__button {
     margin-bottom: 7px;
-    margin-right: -1px;
   }
 }
 #footer {
@@ -369,7 +377,7 @@ h3 {
   flex-direction: column;
   gap: 39px;
   align-items: center;
-  padding: 0px 40px;
+  margin: 0px 40px;
 }
 
 .menu___tabs {
@@ -506,7 +514,7 @@ h3 {
     display: none;
   }
   .menu {
-    padding: 0px 10px;
+    margin: 0px 10px;
   }
   .gallery__item-nodisplay {
     display: none;
@@ -695,6 +703,11 @@ h3 {
     padding-left: 24px;
   }
 }
+@media screen and (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 380px) {
   .enjoy__offer {
     padding: 59.5px 16px;
@@ -796,12 +809,37 @@ h3 {
   background: #665F55;
 }
 
+@media screen and (max-width: 1400px) {
+  .favourites-coffee__carousels {
+    gap: 225px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .favourites-coffee__carousels {
+    gap: 155px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .favourites-coffee__carousels {
+    gap: 55px;
+  }
+}
 @media screen and (max-width: 768px) {
   .favourites-coffee__carousels {
     gap: 45px;
   }
   .favourites-coffe__text {
     text-align: center;
+  }
+}
+@media screen and (max-width: 760px) {
+  .carousels__left-button,
+  .carousels__right-button {
+    display: none;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 380px) {
