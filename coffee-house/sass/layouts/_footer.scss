@@ -133,3 +133,17 @@
   }
 }
 
+@media screen and (max-width: 380px) {
+  .footer__slogans {
+    padding: 60px 0px 38px 16px;
+  }
+
+  .footer br {
+    display: none;
+  }
+
+  .footer__contact {
+    padding: 0px 0px 65px 16px;
+  }
+}
+

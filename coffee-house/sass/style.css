@@ -77,6 +77,15 @@ h3 {
   margin: 0;
 }
 
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 42px;
+    line-height: 115%;
+  }
+  h2 {
+    font-size: 32px;
+  }
+}
 .container {
   width: 100%;
   margin: 0 auto;
@@ -90,6 +99,11 @@ h3 {
 @media screen and (max-width: 769px) {
   .container {
     max-width: 688px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .container {
+    max-width: 348px;
   }
 }
 .header__menu {
@@ -311,6 +325,17 @@ h3 {
   }
   .footer__contact {
     padding: 3px 0px 100px 58px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .footer__slogans {
+    padding: 60px 0px 38px 16px;
+  }
+  .footer br {
+    display: none;
+  }
+  .footer__contact {
+    padding: 0px 0px 65px 16px;
   }
 }
 .border_nav-menu {
@@ -538,6 +563,15 @@ h3 {
     display: none;
   }
 }
+@media screen and (max-width: 380px) {
+  .img-1,
+  .img-4 {
+    height: 590px;
+  }
+  .gallery__image {
+    scale: 1.25;
+  }
+}
 .enjoy__background {
   background: url(../../../../martip54-JSFE2023Q4/coffee-house/assets/img/img-hero.png) no-repeat;
   background-color: rgba(64, 63, 61, 0.8);
@@ -608,6 +642,11 @@ h3 {
   .enjoy__cup {
     opacity: 1;
     padding-left: 24px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .enjoy__offer {
+    padding: 59.5px 16px;
   }
 }
 #favourites-coffee {
@@ -714,6 +753,15 @@ h3 {
     text-align: center;
   }
 }
+@media screen and (max-width: 380px) {
+  .carousels__left-button,
+  .carousels__right-button {
+    display: none;
+  }
+  .carousels__cart {
+    gap: 17px;
+  }
+}
 #mobile-app {
   padding-top: 100px;
 }
@@ -815,6 +863,15 @@ h3 {
 @media screen and (max-width: 460px) {
   .mobile-app__button {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 380px) {
+  .mobile-app__img-container {
+    max-width: 346px;
+    padding-left: 0px;
+  }
+  .mobile-app {
+    gap: 38px;
   }
 }
 

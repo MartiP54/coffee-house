@@ -109,3 +109,14 @@
     text-align: center;
   }
 }
+
+
+@media screen and (max-width: 380px) {
+  .carousels__left-button,
+  .carousels__right-button {
+    display: none;
+  }
+  .carousels__cart {
+    gap:17px;
+  }
+}

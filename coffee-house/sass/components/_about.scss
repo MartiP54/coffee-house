@@ -86,3 +86,13 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 380px) {
+  .img-1,
+  .img-4 {
+    height: 590px;
+  }
+  .gallery__image {
+    scale: 1.25;
+  }
+}
