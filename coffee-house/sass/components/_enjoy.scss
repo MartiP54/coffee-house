@@ -9,7 +9,7 @@
 .enjoy__offer {
   display: flex;
   flex-direction: column;
-  width: 530px;
+  max-width: 530px;
   justify-content: center;
   align-items:flex-start;
   align-self:stretch;
@@ -66,3 +66,13 @@
   transition: 0.7s;
 }
 
+@media screen and (max-width: 769px) {
+  .enjoy__offer {
+    padding: 100px 60px 100px 60px;
+  }
+
+  .enjoy__cup {
+    opacity: 1;
+    padding-left: 24px;
+  }
+}

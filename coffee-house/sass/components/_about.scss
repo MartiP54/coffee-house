@@ -66,3 +66,23 @@
 .img-4 {
   grid-area: img4;
 }
+
+
+@media screen and (max-width: 769px) {
+  .about__gallery {
+    grid-template-areas:
+    "img1"
+    "img4";
+  }
+  .gallery__image {
+    scale: 1.05;
+  }
+  .img-1,
+  .img-4 {
+    max-width: 687px;
+  }
+  .img-2,
+  .img-3 {
+    display: none;
+  }
+}

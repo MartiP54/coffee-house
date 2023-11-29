@@ -66,3 +66,49 @@
   opacity: 1;
   width: 100%;
 }
+
+
+// Hamburger Menu //
+
+.hamburger__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  
+  width: 44px;
+  height: 44px;
+  border-radius:100px;
+  border: 1px solid $color-border-dark;
+
+  z-index: 3;
+}
+
+
+.hamburger__line {
+  height: 2px;
+  width: 16px; 
+  margin: 2px;
+  background:$color-text-dark;
+}
+
+.hamburger__button:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+  .hamburger__button  {
+     display: none !important;
+  }
+
+ 
+}
+
+@media screen and (max-width: 769px) {
+  .nav {
+    display: none;
+  }
+  .menu-link__container {
+    display: none;
+  }
+}
