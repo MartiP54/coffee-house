@@ -55,10 +55,11 @@
   color:$color-text-dark;
 }
 
-.enjoy__button:hover .enjoy__cup {
-  opacity: 1;
-  padding-left: 24px;
-  
+@media (hover: hover) {
+  .enjoy__button:hover .enjoy__cup {
+    opacity: 1;
+    padding-left: 24px;
+  }
 }
 .enjoy__cup {
   opacity: 0;
@@ -66,7 +67,7 @@
   transition: 0.7s;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .enjoy__offer {
     padding: 100px 60px 100px 60px;
   }

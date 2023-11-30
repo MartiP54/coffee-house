@@ -62,10 +62,13 @@
  
 }
 
-.link__animation-header:hover:after {
-  opacity: 1;
-  width: 100%;
+@media (hover: hover) {
+  .link__animation-header:hover:after {
+    opacity: 1;
+    width: 100%;
+  }
 }
+
 
 
 // Hamburger Menu //
@@ -92,8 +95,10 @@
   background:$color-text-dark;
 }
 
-.hamburger__button:hover {
-  cursor: pointer;
+@media (hover: hover) {
+  .hamburger__button:hover {
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -104,7 +109,7 @@
  
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .nav {
     display: none;
   }

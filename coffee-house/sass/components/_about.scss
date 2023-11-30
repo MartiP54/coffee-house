@@ -26,9 +26,10 @@
   scale: 1.1;
   transition: scale 0.7s;
 }
-
-.gallery__box :hover {
-  scale: 1;
+@media (hover: hover) {
+  .gallery__box :hover {
+    scale: 1;
+  }
 }
 
 .img-1,
@@ -67,8 +68,27 @@
   grid-area: img4;
 }
 
+@media screen and (max-width: 1000px) {
+  .about__gallery {
+    grid-template-areas:
+  "img1"
+  "img3"
+  "img2" 
+  "img4"
+  }
+  .img-1,
+  .img-4,
+  .img-2,
+  .img-3 {
+    max-width: 1300px;
+    max-height: none;
+  }
 
-@media screen and (max-width: 769px) {
+}
+
+
+
+@media screen and (max-width: 768px) {
   .about__gallery {
     grid-template-areas:
     "img1"
@@ -80,6 +100,7 @@
   .img-1,
   .img-4 {
     max-width: 687px;
+    max-height: 590px;
   }
   .img-2,
   .img-3 {

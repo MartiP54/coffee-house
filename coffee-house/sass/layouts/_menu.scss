@@ -53,6 +53,8 @@
   transition: 0.7s;
 }
 
+
+
 .tabs__item:hover {
   cursor:pointer;
   background:$color-background-container;
@@ -164,7 +166,7 @@ flex-wrap: wrap;
 
 
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .menu br{
     display: none;
   }

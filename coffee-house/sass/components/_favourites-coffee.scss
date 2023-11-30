@@ -35,21 +35,23 @@
   transition: background 0.7s;
 }
 
-.carousels__left-button:hover ,
-.carousels__right-button:hover {
-  background:$color-background-container;
+@media (hover: hover) {
+  .carousels__left-button:hover ,
+  .carousels__right-button:hover {
+    background:$color-background-container;
+  }
+  
+  .carousels__right-button:hover,
+  .carousels__left-button:hover {
+    cursor: pointer;
+  }
+  
+  .carousels__left-button:hover .arrow-left,
+  .carousels__right-button:hover .arrow-right{
+    stroke:$color-border-light;
+  }
 }
 
-.carousels__right-button:hover,
-.carousels__left-button:hover {
-  cursor: pointer;
-}
-
-
-.carousels__left-button:hover .arrow-left,
-.carousels__right-button:hover .arrow-right{
-  stroke:$color-border-light;
-}
 .arrow-left,
 .arrow-right {
   stroke:$color-text-dark;
@@ -134,10 +136,6 @@
   .carousels__right-button {
     display: none;
   }
-  .container {
-    width: 100%;
-    margin: 0 auto;
-}
 }
 
 
