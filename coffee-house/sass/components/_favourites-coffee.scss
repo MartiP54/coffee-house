@@ -2,9 +2,9 @@
   padding-top: 100px;
 }
 
+
 .favourites-coffee {
   display: flex;
-  max-width: 1360px;
   flex-direction: column;
   align-items:center;
   gap:40px;
@@ -35,21 +35,23 @@
   transition: background 0.7s;
 }
 
-.carousels__left-button:hover ,
-.carousels__right-button:hover {
-  background:$color-background-container;
+@media (hover: hover) {
+  .carousels__left-button:hover ,
+  .carousels__right-button:hover {
+    background:$color-background-container;
+  }
+  
+  .carousels__right-button:hover,
+  .carousels__left-button:hover {
+    cursor: pointer;
+  }
+  
+  .carousels__left-button:hover .arrow-left,
+  .carousels__right-button:hover .arrow-right{
+    stroke:$color-border-light;
+  }
 }
 
-.carousels__right-button:hover,
-.carousels__left-button:hover {
-  cursor: pointer;
-}
-
-
-.carousels__left-button:hover .arrow-left,
-.carousels__right-button:hover .arrow-right{
-  stroke:$color-border-light;
-}
 .arrow-left,
 .arrow-right {
   stroke:$color-text-dark;
@@ -100,3 +102,50 @@
 #control-active {
   background:$color-border-dark;
 }
+
+
+@media screen and (max-width: 1400px) {
+  .favourites-coffee__carousels {
+    gap:225px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .favourites-coffee__carousels {
+    gap:155px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .favourites-coffee__carousels {
+    gap:55px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .favourites-coffee__carousels {
+    gap:45px;
+  }
+  .favourites-coffe__text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .carousels__left-button,
+  .carousels__right-button {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 380px) {
+  .carousels__left-button,
+  .carousels__right-button {
+    display: none;
+  }
+  .carousels__cart {
+    gap:17px;
+  }
+}
+

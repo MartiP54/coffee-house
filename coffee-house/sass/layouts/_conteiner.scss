@@ -8,3 +8,17 @@
     max-width: 1360px;
   }
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+      max-width: 688px;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .container {
+      max-width: 348px;
+    }
+  }
+
+
