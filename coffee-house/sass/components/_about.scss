@@ -70,6 +70,7 @@
 
 @media screen and (max-width: 1000px) {
   .about__gallery {
+    justify-content: center;
     grid-template-areas:
   "img1"
   "img3"
@@ -80,7 +81,7 @@
   .img-4,
   .img-2,
   .img-3 {
-    max-width: 1300px;
+    max-width: 950px;
     max-height: none;
   }
 
@@ -90,10 +91,12 @@
 
 @media screen and (max-width: 768px) {
   .about__gallery {
+    justify-content: normal;
     grid-template-areas:
     "img1"
     "img4";
   }
+  
   .gallery__image {
     scale: 1.05;
   }
