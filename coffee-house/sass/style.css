@@ -403,23 +403,28 @@ h3 {
   transition: 0.7s;
 }
 
-.tabs__item:hover {
-  cursor: pointer;
-  background: #665F55;
-  color: #E1D4C9;
+@media (hover: hover) {
+  .tabs__item:hover {
+    cursor: pointer;
+    background: #665F55;
+    color: #E1D4C9;
+  }
+  .tabs__item:hover .icon__box {
+    background: #E1D4C9;
+  }
+  .tabs__item-active:hover {
+    cursor: default;
+  }
+  .gallery__item:hover {
+    cursor: pointer;
+  }
+  .gallery__item:hover .gallery-menu__image {
+    scale: 1;
+  }
 }
-
-.tabs__item:hover .icon__box {
-  background: #E1D4C9;
-}
-
 .tabs__item-active {
   background: #665F55;
   color: #E1D4C9;
-}
-
-.tabs__item-active:hover {
-  cursor: default;
 }
 
 .icon__box {
@@ -465,14 +470,6 @@ h3 {
   height: 100%;
   scale: 1.1;
   transition: scale 0.7s;
-}
-
-.gallery__item:hover {
-  cursor: pointer;
-}
-
-.gallery__item:hover .gallery-menu__image {
-  scale: 1;
 }
 
 .item__title {
