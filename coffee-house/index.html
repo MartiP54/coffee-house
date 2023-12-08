@@ -11,8 +11,8 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header__menu">
-        <div class="logo">
+      <div class="header__menu header__menu-active">
+        <div class="logo nav__item">
           <a href="#">
             <img class="logo__img" src="./assets/img/logo.png" alt="logo coffe house">
           </a>
@@ -22,7 +22,7 @@
           <span class="hamburger__line"></span>
         </div>
         <nav class="nav">
-          <ul class="nav__list">
+          <ul class="nav__list ">
             <li class="nav__item">
               <a href="#favourites-coffee" class="nav__link link__animation-header">Favorite coffee</a>
             </li>
@@ -35,16 +35,25 @@
             <li class="nav__item">
               <a href="#footer" class="nav__link link__animation-header">Contact us</a>
             </li>
+            <div class="menu-link__container-mobile">
+              <div class="header__menu-link link__animation-header ">
+              <a href="./menu.html" class="nav__link nav__item"> 
+                Menu
+              </a>
+                <img class="menu-link__img" src="./assets/img/coffee-cup_burger.png" alt="coffe cup">
+              </div>
+            </div>
           </ul>
-        </nav>
-        <div class="menu-link__container">
-          <div class="header__menu-link link__animation-header ">
-          <a href="./menu.html" class="nav__link nav__item"> 
-            Menu
-          </a>
-            <img class="menu-link__img" src="./assets/img/menu-link_coffee-cup.png" alt="coffe cup">
-          </div>
+          
+      </nav>
+      <div class="menu-link__container">
+        <div class="header__menu-link link__animation-header ">
+        <a href="./menu.html" class="nav__link nav__item"> 
+          Menu
+        </a>
+          <img class="menu-link__img" src="./assets/img/menu-link_coffee-cup.png" alt="coffe cup">
         </div>
+      </div>
       </div>
     </div>
   </header>
@@ -60,6 +69,12 @@
           </a>
         </div>
       </div>
+      <div class="enjoy__video-wrapper">
+        <video autoplay loop muted class="enjoy__video">
+          <source src="./assets/img/enjoy_video.webm" type="video/webm">
+        </video>
+      </div>
+      
     </div>
       
 

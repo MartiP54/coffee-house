@@ -167,6 +167,9 @@ flex-wrap: wrap;
 
 
 @media screen and (max-width: 768px) {
+  .header__menu-link-menu {
+    display: block !important;
+  }
   .menu br{
     display: none;
   }

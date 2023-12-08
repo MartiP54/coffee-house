@@ -11,7 +11,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header__menu">
+      <div class="header__menu header__menu-active">
         <div class="logo">
           <a href="./index.html">
             <img class="logo__img" src="./assets/img/logo.png" alt="logo coffe house">
@@ -22,32 +22,38 @@
           <span class="hamburger__line"></span>
         </div>
         <nav class="nav">
-          <ul class="nav__list">
+          <ul class="nav__list ">
             <li class="nav__item">
               <a href="./index.html#favourites-coffee" class="nav__link link__animation-header">Favorite coffee</a>
-              <div class="border_nav"></div>
             </li>
             <li class="nav__item">
               <a href="./index.html#about" class="nav__link link__animation-header">About</a>
-              <div class="border_nav"></div>
             </li>
             <li class="nav__item">
               <a href="./index.html#mobile-app" class="nav__link link__animation-header">Mobile app</a>
-              <div class="border_nav"></div>
             </li>
             <li class="nav__item">
               <a href="#menu__footer" class="nav__link link__animation-header">Contact us</a>
-              <div class="border_nav"></div>
             </li>
+            <div class="menu-link__container-mobile header__menu-link-menu">
+              <div class="header__menu-link nav__item">
+                Menu
+                <img class="menu-link__img" src="./assets/img/coffee-cup_burger.png" alt="coffe cup">
+              </div>
+              <div class="border_nav-menu"></div>
+            </div>
           </ul>
-        </nav>
-        <div class="menu-link__container">
-          <div class="header__menu-link">
-            Menu
-            <img class="menu-link__img" src="./assets/img/menu-link_coffee-cup.png" alt="coffe cup">
-          </div>
-            <div class="border_nav-menu"></div>
+          
+      </nav>
+      <div class="menu-link__container">
+        <div class="header__menu-link">
+        <a href="./menu.html" class="nav__link nav__item"> 
+          Menu
+        </a>
+          <img class="menu-link__img" src="./assets/img/menu-link_coffee-cup.png" alt="coffe cup">
         </div>
+        <div class="border_nav-menu"></div>
+      </div>
       </div>
     </div>
   </header>
@@ -279,7 +285,6 @@
       </div>
     </div>
   </footer>
-
-
+  <script src="./menu.js"></script>
 </body>
 </html>

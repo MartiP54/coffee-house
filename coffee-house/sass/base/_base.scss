@@ -87,6 +87,9 @@ h3 {
   h2 {
     font-size: 40px;
   }
+  body {
+    margin: 0 40px;
+  }
 }
 
 
@@ -98,5 +101,11 @@ h3 {
 
   h2 {
     font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  body {
+    margin: 0 auto;
   }
 }
