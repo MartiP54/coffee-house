@@ -21,4 +21,23 @@
     }
   }
 
+  
+  @media screen and (max-width: 1420px) {
+    body {
+      margin:0 40px;
+    }
+  }
 
+
+
+@media screen and (min-width: 767px) and (max-width: 769px) {
+  body {
+    margin:0 40px;
+  }
+}
+
+@media screen and (min-width: 379px) and (max-width: 381px) {
+  body {
+    margin:0 auto !important;
+  }
+}
