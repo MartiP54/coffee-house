@@ -49,3 +49,161 @@ const close_hamburger = () => {
     });
 };
 // hamburger_menu end //
+
+
+// category drink paganation start//
+const MENU_GALLERY = document.querySelector(".menu__gallery");
+const TABS_COFFEE = document.querySelector("#tabs_coffee");
+const TABS_TEA = document.querySelector("#tabs_tea");
+const TABS_DESSERT = document.querySelector("#tabs_dessert");
+
+const COFFEE_ARRAY = [0,1,2,3,4,5,6,7];
+const TEA_ARRAY = [8,9,10,11];
+const DESSERT_ARRAY = [12,13,14,15,16,17,18,19];
+
+const  createCardTemplate = (id) => {
+        
+    const card = document.createElement("div");
+    card.classList.add("gallery__item");
+    card.id = drink_info[id].id;
+    MENU_GALLERY.appendChild(card);
+
+    const gallery_Box = document.createElement("div");
+    gallery_Box.classList.add("gallery-menu__box");
+    card.appendChild(gallery_Box);
+
+    const img = document.createElement('img');
+    img.classList.add('gallery-menu__image');
+    img.src = `./assets/img/drink-${id}.png`;
+    img.alt = `${drink_info[id].name}`;
+    gallery_Box.appendChild(img);
+
+    const item_Descriptions = document.createElement("div");
+    item_Descriptions.classList.add('item__descriptions');
+    card.appendChild(item_Descriptions);
+
+    const item_Title = document.createElement("div");
+    item_Title.classList.add('item__title');
+    item_Descriptions.appendChild(item_Title);
+
+    const item_Name = document.createElement("h3");
+    item_Name.classList.add('item__name');
+    item_Name.innerHTML = drink_info[id].name;
+    item_Title.appendChild(item_Name);
+
+    const item__Description = document.createElement("p");
+    item__Description.classList.add('item__description');
+    item__Description.innerHTML = drink_info[id].description;
+    item_Title.appendChild(item__Description);
+    
+    const item_Price = document.createElement("h3");
+    item_Price.classList.add('item__price');
+    item_Price.innerHTML = `$ ${drink_info[id].price}`;
+    item_Title.appendChild(item_Price);
+
+    return card;
+  }
+
+  
+  for (let i = 0; i < COFFEE_ARRAY.length ; i++) {
+    createCardTemplate(i);
+  }
+
+  TABS_COFFEE.addEventListener("click", () => {
+    MENU_GALLERY.innerHTML='';
+    TABS_COFFEE.classList.add('tabs__item-active');
+    TABS_TEA.classList.remove('tabs__item-active');
+    TABS_DESSERT.classList.remove('tabs__item-active');
+    for (let i = 0; i < COFFEE_ARRAY.length ; i++) {
+        createCardTemplate(i);
+      }
+});
+
+TABS_TEA.addEventListener("click", () => {
+    MENU_GALLERY.innerHTML='';
+    TABS_TEA.classList.add('tabs__item-active');
+    TABS_COFFEE.classList.remove('tabs__item-active');
+    TABS_DESSERT.classList.remove('tabs__item-active');
+    for (let i = 0; i < TEA_ARRAY.length ; i++) {
+        createCardTemplate(i+8);
+      }
+});
+
+TABS_DESSERT.addEventListener("click", () => {
+    MENU_GALLERY.innerHTML='';
+    TABS_DESSERT.classList.add('tabs__item-active');
+    TABS_TEA.classList.remove('tabs__item-active');
+    TABS_COFFEE.classList.remove('tabs__item-active');
+    for (let i = 0; i < DESSERT_ARRAY.length ; i++) {
+        createCardTemplate(i+12);
+      }
+});
+  console.log(TABS_TEA);
+
+  // category drink paganation end//
+
+
+  // pop-up start//
+const drink_card = document.getElementById("menu__active");
+const pop_up_image = document.querySelector('.pop_up_image');
+const pop_up_name = document.querySelector('.pop_up_name');
+const pop_up_type = document.querySelector('.pop_up_type');
+const pop_up_description = document.querySelector('.pop_up_description');
+const pop_up_age = document.querySelector('.pop_up_age');
+const pop_up__inoculations = document.querySelector('.pop_up_inoculations');
+const pop_up_diseases = document.querySelector('.pop_up_diseases');
+const pop_up_parasites = document.querySelector('.pop_up_parasites');
+const pop_up_wrapper = document.querySelector('.pop_up_wrapper');
+const pop_up_fix = document.querySelector('.pop_up_fix');
+const pop_up  = document.querySelector('.pop_up');
+
+
+
+drink_card.addEventListener('click', drink_id )
+
+
+
+
+function drink_id(e) {
+    if (e.target.parentElement.id == 'menu__active') {
+        id = (e.target.id);
+    } else {
+        id = (e.target.parentElement.id);
+    }
+    CreateDrinkCardPopup(id);
+}
+
+
+function CreateDrinkCardPopup  (id)  {
+
+    
+    pop_up_fix.classList.add('pop_up_overlay');
+    document.body.classList.add('noscroll');
+    pop_up_wrapper.classList.add('pop_up_open');
+    pop_up.style.display = 'flex';
+
+    pop_up_image.src = `./assets/img/drink-${id}.png`;
+    pop_up_image.alt = `${pets_info[id].name}`;
+    pop_up_name.innerHTML = pets_info[id].name;
+    pop_up_type.innerHTML = `${pets_info[id].type} - ${pets_info[id].breed}`;
+    pop_up_description.innerHTML = pets_info[id].description;
+    pop_up_age.innerHTML = `${pets_info[id].age}`;
+    pop_up__inoculations.innerHTML = `${pets_info[id].inoculations}`;
+    pop_up_diseases.innerHTML = ` ${pets_info[id].diseases}`;
+    pop_up_parasites.innerHTML = ` ${pets_info[id].parasites}`;
+}
+
+
+pop_up_fix.addEventListener('click', pop_up_close)
+
+function pop_up_close(e) {
+  if (e.target.classList.contains('pop_up_overlay') || e.target.classList.contains('pop_up_button')  || e.target.classList.contains('pop_up')) {
+    pop_up_fix.classList.remove('pop_up_overlay');
+    pop_up_wrapper.classList.remove('pop_up_open')
+    pop_up.style.display = 'none';
+    document.body.classList.remove('noscroll');
+  }    
+}
+
+
+  // pop-up end//

@@ -875,8 +875,8 @@ h3 {
 }
 
 .carousels__picture-container {
-  max-width: 480px;
-  max-height: 480px;
+  width: 480px;
+  height: 480px;
 }
 
 .carousels__picture {
@@ -946,6 +946,49 @@ h3 {
     gap: 17px;
   }
 }
+.carousels__wrapper {
+  width: 480px;
+  overflow: hidden;
+  height: auto;
+}
+
+.carousels__items {
+  display: flex;
+  position: relative;
+  left: 0px;
+}
+
+:root {
+  --my-start-width: 0px;
+  --my-end-width: 0px;
+}
+
+@keyframes carusel-left {
+  from {
+    left: var(--my-start-width);
+  }
+  to {
+    left: var(--my-end-width);
+  }
+}
+.transition-carusel-left {
+  animation-name: carusel-left;
+  animation-duration: 1s;
+}
+
+@keyframes carusel-right {
+  from {
+    left: var(--my-start-width);
+  }
+  to {
+    left: var(--my-end-width);
+  }
+}
+.transition-carusel-right {
+  animation-name: carusel-right;
+  animation-duration: 1s;
+}
+
 #mobile-app {
   padding-top: 100px;
 }

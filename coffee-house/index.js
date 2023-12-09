@@ -49,3 +49,58 @@ const close_hamburger = () => {
     });
 };
 // hamburger_menu end //
+
+
+// carousel start//
+
+const button_left = document.querySelector(".carousels__left-button");
+const button_right = document.querySelector(".carousels__right-button");
+const carusel = document.querySelector(".carousels__items");
+let offset = 0;
+
+
+
+    const move_left = () => {
+        document.documentElement.style.setProperty('--my-start-width', `${offset}px`);
+        offset = offset + 480;
+        if (offset > 0) {
+            offset = -960;
+        }
+        document.documentElement.style.setProperty('--my-end-width', `${offset}px`);
+        carusel.classList.add("transition-carusel-left");
+        button_left.removeEventListener("click",move_left);
+        button_right.removeEventListener("click",move_right);
+    }
+
+    const move_right = () => {
+        document.documentElement.style.setProperty('--my-start-width', `${offset}px`);
+        offset = offset - 480;
+        if (offset < -960) {
+            offset = 0;
+        }
+        document.documentElement.style.setProperty('--my-end-width', `${offset}px`);
+        carusel.classList.add("transition-carusel-right");
+        button_right.removeEventListener("click",move_right);
+        button_left.removeEventListener("click",move_left);
+    }
+
+
+    button_right.addEventListener("click",move_right);
+    button_left.addEventListener("click",move_left);
+
+    carusel.addEventListener("animationend", (animation) => {
+
+        if (animation.animationName === "carusel-left") {
+            carusel.classList.remove("transition-carusel-left");
+            carusel.style.left = offset +'px';
+        }
+
+        if (animation.animationName === "carusel-right") {
+            carusel.classList.remove("transition-carusel-right");
+            carusel.style.left = offset +'px';
+        }
+
+        button_right.addEventListener("click",move_right);
+        button_left.addEventListener("click",move_left);
+    });
+
