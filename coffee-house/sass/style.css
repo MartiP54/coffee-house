@@ -619,6 +619,10 @@ h3 {
   align-items: center;
 }
 
+.pop_up {
+  display: none;
+}
+
 .pop_up-overlay {
   position: fixed;
   z-index: 3;
@@ -665,6 +669,15 @@ h3 {
   gap: 20px;
   align-items: flex-start;
   flex: 1 0 0;
+}
+
+.pop_up-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
 }
 
 .pop_up-name {
@@ -746,6 +759,10 @@ h3 {
   align-self: stretch;
 }
 
+.pop_up-price {
+  padding-right: 32px;
+}
+
 .pop_up-alert {
   display: flex;
   padding: 12px 0px;
@@ -767,11 +784,9 @@ h3 {
 
 .pop_up-button {
   display: flex;
-  padding: 10px 78px;
+  padding: 10px 195px;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-  align-self: stretch;
   border-radius: 100px;
   border: 1px solid #665F55;
   font-family: "Inter", sans-serif;

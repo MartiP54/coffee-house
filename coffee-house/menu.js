@@ -148,7 +148,9 @@ TABS_DESSERT.addEventListener("click", () => {
  const pop_up_image = document.querySelector('.pop_up-image');
  const pop_up_name = document.querySelector('.pop_up-name');
  const pop_up_description = document.querySelector('.pop_up-description');
- const pop_up_size = document.querySelector('.pop_up-size');
+ const pop_up_price = document.querySelector('.pop_up-price');
+
+
  
 
  const pop_up_wrapper = document.querySelector('.pop_up-wrapper');
@@ -188,7 +190,7 @@ TABS_DESSERT.addEventListener("click", () => {
     pop_up_image.alt = `${drink_info[id].name}`; 
     pop_up_name.innerHTML = drink_info[id].name;
     pop_up_description.innerHTML = drink_info[id].description;
-    // pop_up_size.innerHTML = `${drink_info[id].size}`;
+    pop_up_price.innerHTML = `${drink_info[id].price}`;
  }
  
  
