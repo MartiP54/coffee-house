@@ -138,72 +138,70 @@ TABS_DESSERT.addEventListener("click", () => {
         createCardTemplate(i+12);
       }
 });
-  console.log(TABS_TEA);
+
 
   // category drink paganation end//
 
 
-  // pop-up start//
-const drink_card = document.getElementById("menu__active");
-const pop_up_image = document.querySelector('.pop_up_image');
-const pop_up_name = document.querySelector('.pop_up_name');
-const pop_up_type = document.querySelector('.pop_up_type');
-const pop_up_description = document.querySelector('.pop_up_description');
-const pop_up_age = document.querySelector('.pop_up_age');
-const pop_up__inoculations = document.querySelector('.pop_up_inoculations');
-const pop_up_diseases = document.querySelector('.pop_up_diseases');
-const pop_up_parasites = document.querySelector('.pop_up_parasites');
-const pop_up_wrapper = document.querySelector('.pop_up_wrapper');
-const pop_up_fix = document.querySelector('.pop_up_fix');
-const pop_up  = document.querySelector('.pop_up');
+ // pop-up start//
+ const drink_card = document.getElementById("menu__active");
+ const pop_up_image = document.querySelector('.pop_up-image');
+ const pop_up_name = document.querySelector('.pop_up-name');
+ const pop_up_description = document.querySelector('.pop_up-description');
+ const pop_up_size = document.querySelector('.pop_up-size');
+ 
 
-
-
-drink_card.addEventListener('click', drink_id )
-
-
-
-
-function drink_id(e) {
-    if (e.target.parentElement.id == 'menu__active') {
-        id = (e.target.id);
-    } else {
+ const pop_up_wrapper = document.querySelector('.pop_up-wrapper');
+ const pop_up_fix = document.querySelector('.pop_up-fix');
+ const pop_up  = document.querySelector('.pop_up');
+ 
+ 
+ 
+ drink_card.addEventListener('click', drink_id )
+ 
+ 
+ 
+ 
+ function drink_id(e) {
+     if (e.target.parentElement.parentElement.parentElement.id == 'menu__active') {
+         id = (e.target.parentElement.parentElement.id);
+         console.log(id);
+     }  if (e.target.parentElement.parentElement.id == 'menu__active') {
         id = (e.target.parentElement.id);
-    }
-    CreateDrinkCardPopup(id);
-}
-
-
-function CreateDrinkCardPopup  (id)  {
-
-    
-    pop_up_fix.classList.add('pop_up_overlay');
+        console.log(id);
+     } else {
+         id = (e.target.parentElement.parentElement.parentElement.id);
+         console.log(id);
+     }
+     CreateDrinkCardPopup(id);
+ }
+ 
+ 
+ function CreateDrinkCardPopup  (id)  {
+ 
+     
+    pop_up_fix.classList.add('pop_up-overlay');
     document.body.classList.add('noscroll');
     pop_up_wrapper.classList.add('pop_up_open');
     pop_up.style.display = 'flex';
-
     pop_up_image.src = `./assets/img/drink-${id}.png`;
-    pop_up_image.alt = `${pets_info[id].name}`;
-    pop_up_name.innerHTML = pets_info[id].name;
-    pop_up_type.innerHTML = `${pets_info[id].type} - ${pets_info[id].breed}`;
-    pop_up_description.innerHTML = pets_info[id].description;
-    pop_up_age.innerHTML = `${pets_info[id].age}`;
-    pop_up__inoculations.innerHTML = `${pets_info[id].inoculations}`;
-    pop_up_diseases.innerHTML = ` ${pets_info[id].diseases}`;
-    pop_up_parasites.innerHTML = ` ${pets_info[id].parasites}`;
-}
-
-
-pop_up_fix.addEventListener('click', pop_up_close)
-
-function pop_up_close(e) {
-  if (e.target.classList.contains('pop_up_overlay') || e.target.classList.contains('pop_up_button')  || e.target.classList.contains('pop_up')) {
-    pop_up_fix.classList.remove('pop_up_overlay');
-    pop_up_wrapper.classList.remove('pop_up_open')
-    pop_up.style.display = 'none';
-    document.body.classList.remove('noscroll');
-  }    
-}
-
-
-  // pop-up end//
+    pop_up_image.alt = `${drink_info[id].name}`; 
+    pop_up_name.innerHTML = drink_info[id].name;
+    pop_up_description.innerHTML = drink_info[id].description;
+    // pop_up_size.innerHTML = `${drink_info[id].size}`;
+ }
+ 
+ 
+ pop_up_fix.addEventListener('click', pop_up_close)
+ 
+ function pop_up_close(e) {
+   if (e.target.classList.contains('pop_up-overlay') || e.target.classList.contains('pop_up-button')  || e.target.classList.contains('pop_up')) {
+     pop_up_fix.classList.remove('pop_up-overlay');
+     pop_up_wrapper.classList.remove('pop_up-open')
+     pop_up.style.display = 'none';
+     document.body.classList.remove('noscroll');
+   }    
+ }
+ 
+ 
+   // pop-up end//
