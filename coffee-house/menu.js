@@ -144,66 +144,145 @@ TABS_DESSERT.addEventListener("click", () => {
 
 
  // pop-up start//
- const drink_card = document.getElementById("menu__active");
- const pop_up_image = document.querySelector('.pop_up-image');
- const pop_up_name = document.querySelector('.pop_up-name');
- const pop_up_description = document.querySelector('.pop_up-description');
- const pop_up_price = document.querySelector('.pop_up-price');
+ const DRINK_CARD = document.getElementById("menu__active");
+ const POP_UP_IMAGE = document.querySelector('.pop_up-image');
+ const POP_UP_NAME = document.querySelector('.pop_up-name');
+ const POP_UP_DESCRIPTION = document.querySelector('.pop_up-description');
+ const POP_UP_PRICE = document.querySelector('.pop_up-price');
+ const POP_UP_WRAPPER = document.querySelector('.pop_up-wrapper');
+ const POP_UP_FIX = document.querySelector('.pop_up-fix');
+ const POP_UP  = document.querySelector('.pop_up');
+ const POP_UP_SIZE_S= document.querySelector('.pop_up-tabs-item-s');
+ const POP_UP_SIZE_M= document.querySelector('.pop_up-tabs-item-m');
+ const POP_UP_SIZE_L= document.querySelector('.pop_up-tabs-item-l');
+ const ADDITIVES_ONE = document.querySelector('.additives_one');
+ const ADDITIVES_TWO = document.querySelector('.additives_two');
+ const ADDITIVES_THREE = document.querySelector('.additives_three');
+ const POP_UP_TABS = document.querySelectorAll('.pop_up-tabs-item');
+ const POP_UP_ADDITIVES = document.querySelectorAll('.pop_up-additives-items');
+ let price;
+ let default_price;
+ let price_additives = 0;
+ let price_size = 0;
 
-
  
-
- const pop_up_wrapper = document.querySelector('.pop_up-wrapper');
- const pop_up_fix = document.querySelector('.pop_up-fix');
- const pop_up  = document.querySelector('.pop_up');
- 
- 
- 
- drink_card.addEventListener('click', drink_id )
- 
- 
- 
+ DRINK_CARD.addEventListener('click', drink_id );
  
  function drink_id(e) {
+    if (e.target.parentElement.parentElement.parentElement.parentElement.id == 'menu__active') {
+        id = (e.target.parentElement.parentElement.parentElement.id);
+        CreateDrinkCardPopup(id);
+     }
      if (e.target.parentElement.parentElement.parentElement.id == 'menu__active') {
          id = (e.target.parentElement.parentElement.id);
-         console.log(id);
-     }  if (e.target.parentElement.parentElement.id == 'menu__active') {
+         CreateDrinkCardPopup(id);
+     }  
+     if (e.target.parentElement.parentElement.id == 'menu__active') {
         id = (e.target.parentElement.id);
-        console.log(id);
-     } else {
-         id = (e.target.parentElement.parentElement.parentElement.id);
-         console.log(id);
+        CreateDrinkCardPopup(id);
      }
-     CreateDrinkCardPopup(id);
  }
- 
  
  function CreateDrinkCardPopup  (id)  {
- 
-     
-    pop_up_fix.classList.add('pop_up-overlay');
+    POP_UP_FIX.classList.add('pop_up-overlay');
     document.body.classList.add('noscroll');
-    pop_up_wrapper.classList.add('pop_up_open');
-    pop_up.style.display = 'flex';
-    pop_up_image.src = `./assets/img/drink-${id}.png`;
-    pop_up_image.alt = `${drink_info[id].name}`; 
-    pop_up_name.innerHTML = drink_info[id].name;
-    pop_up_description.innerHTML = drink_info[id].description;
-    pop_up_price.innerHTML = `${drink_info[id].price}`;
+    POP_UP_WRAPPER.classList.add('pop_up_open');
+    POP_UP_WRAPPER.id = id;
+    POP_UP.style.display = 'flex';
+    POP_UP_IMAGE.src = `./assets/img/drink-${id}.png`;
+    POP_UP_IMAGE.alt = `${drink_info[id].name}`; 
+    POP_UP_NAME.innerHTML = drink_info[id].name;
+    POP_UP_DESCRIPTION.innerHTML = drink_info[id].description;
+    POP_UP_PRICE.innerHTML = `$${drink_info[id].price}`;
+    POP_UP_SIZE_S.innerHTML = drink_info[id].sizes.s.size;
+    POP_UP_SIZE_M.innerHTML = drink_info[id].sizes.m.size;
+    POP_UP_SIZE_L.innerHTML = drink_info[id].sizes.l.size;
+    ADDITIVES_ONE.innerHTML = drink_info[id].additives[0].name;
+    ADDITIVES_TWO.innerHTML = drink_info[id].additives[1].name;
+    ADDITIVES_THREE.innerHTML = drink_info[id].additives[2].name;
+    default_price = Number(POP_UP_PRICE.innerHTML.slice(1));
  }
  
  
- pop_up_fix.addEventListener('click', pop_up_close)
+ POP_UP_FIX.addEventListener('click', pop_up_close);
  
  function pop_up_close(e) {
    if (e.target.classList.contains('pop_up-overlay') || e.target.classList.contains('pop_up-button')  || e.target.classList.contains('pop_up')) {
-     pop_up_fix.classList.remove('pop_up-overlay');
-     pop_up_wrapper.classList.remove('pop_up-open')
-     pop_up.style.display = 'none';
+     POP_UP_FIX.classList.remove('pop_up-overlay');
+     POP_UP_WRAPPER.classList.remove('pop_up-open')
+     POP_UP.style.display = 'none';
      document.body.classList.remove('noscroll');
-   }    
+
+     POP_UP_ADDITIVES.forEach((addives) => {
+        addives.classList.remove('tabs__item-active');
+        addives.classList.remove('addives-active');
+    });
+
+    POP_UP_SIZE_S.parentElement.classList.add('tabs__item-active');
+    POP_UP_SIZE_M.parentElement.classList.remove('tabs__item-active');
+    POP_UP_SIZE_L.parentElement.classList.remove('tabs__item-active');
+
+   }
  }
  
- 
+
+
+POP_UP_TABS.forEach((tabs) => {
+    tabs.addEventListener("click", (e) => {
+        POP_UP_TABS.forEach((t) => { 
+            t.classList.remove('tabs__item-active');
+        });
+        e.currentTarget.classList.add('tabs__item-active');
+    });
+});
+
+
+
+POP_UP_ADDITIVES.forEach((addives) => {
+    addives.addEventListener("click", (e) => {
+    if (e.currentTarget.classList.contains ('tabs__item-active')) {
+        e.currentTarget.classList.remove('tabs__item-active');
+        e.currentTarget.classList.remove('addives-active');
+    } else {
+        e.currentTarget.classList.add('tabs__item-active');
+        e.currentTarget.classList.add('addives-active');
+    }
+    });
+});
+
+    POP_UP_TABS.forEach((tabs) => { 
+        tabs.addEventListener("click", priceCount);
+    });
+
+    POP_UP_ADDITIVES.forEach((addives) => { 
+        addives.addEventListener("click", priceCount)
+    });
+
+    function priceCount(e) {
+        const POP_UP_ADDITIVES_COUNT = document.querySelectorAll('.addives-active');
+        price_additives = POP_UP_ADDITIVES_COUNT.length * 0.5;
+        if (e.currentTarget.classList.contains('pop_up-tabs-item')) {
+            if (e.currentTarget.id == 'm') {
+                price_size = 0.5;
+                price = default_price + price_size + price_additives;
+            }
+            if (e.currentTarget.id == 'l') {
+                price_size = 1;
+                price = default_price + price_size + price_additives;
+            }
+            if (e.currentTarget.id == 's') {
+                price_size = 0;
+                price = default_price + price_size + price_additives;
+            }
+        }
+
+        if (e.currentTarget.classList.contains('pop_up-additives-items')) {
+            price = default_price + price_size + price_additives;
+        }
+
+        POP_UP_PRICE.innerHTML = `$${price.toFixed(2)}`;
+    }
+
+
+
    // pop-up end//

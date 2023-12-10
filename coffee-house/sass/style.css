@@ -795,11 +795,14 @@ h3 {
   font-weight: 600;
   line-height: 150%;
   color: #403F3D;
+  transition: 0.7s;
 }
 
 .pop_up-button:hover {
   background: #665F55;
   border-color: #C1B6AD;
+  color: #E1D4C9;
+  cursor: pointer;
 }
 
 #about {
