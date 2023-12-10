@@ -563,7 +563,7 @@ h3 {
 }
 
 .menu__refresh-icon {
-  display: flex;
+  display: none;
   width: 60px;
   height: 60px;
   justify-content: center;
@@ -613,6 +613,10 @@ h3 {
     display: none !important;
   }
 }
+.display_none {
+  display: none;
+}
+
 .pop_up-fix {
   display: flex;
   justify-content: center;

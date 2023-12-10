@@ -51,15 +51,21 @@ const close_hamburger = () => {
 // hamburger_menu end //
 
 
+
+
 // category drink paganation start//
 const MENU_GALLERY = document.querySelector(".menu__gallery");
 const TABS_COFFEE = document.querySelector("#tabs_coffee");
 const TABS_TEA = document.querySelector("#tabs_tea");
 const TABS_DESSERT = document.querySelector("#tabs_dessert");
+const REFRESH_ICON = document.querySelector(".menu__refresh-icon");
+
 
 const COFFEE_ARRAY = [0,1,2,3,4,5,6,7];
 const TEA_ARRAY = [8,9,10,11];
 const DESSERT_ARRAY = [12,13,14,15,16,17,18,19];
+
+
 
 const  createCardTemplate = (id) => {
         
@@ -117,6 +123,7 @@ const  createCardTemplate = (id) => {
     for (let i = 0; i < COFFEE_ARRAY.length ; i++) {
         createCardTemplate(i);
       }
+      galleryItemReSize ();
 });
 
 TABS_TEA.addEventListener("click", () => {
@@ -127,6 +134,7 @@ TABS_TEA.addEventListener("click", () => {
     for (let i = 0; i < TEA_ARRAY.length ; i++) {
         createCardTemplate(i+8);
       }
+      galleryItemReSize ();
 });
 
 TABS_DESSERT.addEventListener("click", () => {
@@ -137,10 +145,75 @@ TABS_DESSERT.addEventListener("click", () => {
     for (let i = 0; i < DESSERT_ARRAY.length ; i++) {
         createCardTemplate(i+12);
       }
+      galleryItemReSize ();
 });
 
 
+
+function galleryItemReSize () {
+let media1280 = window.matchMedia('(min-width: 769px)');
+media1280.addListener(Destop);
+Destop(media1280);
+function Destop(e) {
+    if (e.matches) { 
+        const GALLERY_ITEM = document.querySelectorAll(".gallery__item");
+        if (GALLERY_ITEM.length > 4) {
+            GALLERY_ITEM.forEach ((g) => {
+                if ((g.id > 3 && g.id < 8) || (g.id > 15)) {
+                    g.classList.remove('display_none')
+                }
+            })
+            REFRESH_ICON.style.display = 'none';
+        }
+    }
+}
+
+const media768 = window.matchMedia('(max-width: 768px)');
+
+
+media768.addListener(Table);
+Table(media768);
+function Table(e) {
+    if (e.matches) {
+        const GALLERY_ITEM = document.querySelectorAll(".gallery__item");
+        if (GALLERY_ITEM.length > 4) {
+            GALLERY_ITEM.forEach ((g) => {
+                if ((g.id > 3 && g.id < 8) || (g.id > 15)) {
+                    g.classList.add('display_none')
+                }
+            }) 
+            REFRESH_ICON.style.display = 'flex';
+        } else {
+            REFRESH_ICON.style.display = 'none';
+        }
+    }
+}
+}
+
+galleryItemReSize ();
+
+function refreshDisplay () {
+    const GALLERY_ITEM = document.querySelectorAll(".gallery__item");
+    if (GALLERY_ITEM.length > 4) {
+        GALLERY_ITEM.forEach ((g) => {
+            if ((g.id > 3 && g.id < 8) || (g.id > 15)) {
+                g.classList.remove('display_none')
+            }
+        }) 
+    } 
+        REFRESH_ICON.style.display = 'none';
+}
+
+REFRESH_ICON.addEventListener('click', refreshDisplay);
+
+
   // category drink paganation end//
+
+
+
+
+
+
 
 
  // pop-up start//
@@ -184,8 +257,8 @@ TABS_DESSERT.addEventListener("click", () => {
  }
  
  function CreateDrinkCardPopup  (id)  {
-    POP_UP_FIX.classList.add('pop_up-overlay');
     document.body.classList.add('noscroll');
+    POP_UP_FIX.classList.add('pop_up-overlay');
     POP_UP_WRAPPER.classList.add('pop_up_open');
     POP_UP_WRAPPER.id = id;
     POP_UP.style.display = 'flex';
@@ -282,7 +355,5 @@ POP_UP_ADDITIVES.forEach((addives) => {
 
         POP_UP_PRICE.innerHTML = `$${price.toFixed(2)}`;
     }
-
-
 
    // pop-up end//
