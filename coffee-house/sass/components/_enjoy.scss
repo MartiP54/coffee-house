@@ -12,11 +12,8 @@
 
 }
 .enjoy__video {
-
-  
   width: 100%;
-  height: 650px;
-  // position: absolute;
+  height: 643px;
   object-fit: cover;
   top: 0;
   left: 0;
@@ -106,6 +103,9 @@
 @media screen and (max-width: 380px) {
   .enjoy__offer {
     padding: 59.5px 16px;
+  }
+  .enjoy__video {
+    height: 552px;
   }
 }
 

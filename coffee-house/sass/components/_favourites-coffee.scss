@@ -157,6 +157,25 @@
   .carousels__cart {
     gap:17px;
   }
+  .carousels__wrapper {
+    width: 280px;
+    overflow: hidden;
+    height: auto;
+  }
+  .carousels__picture-container {
+    width: 345px;
+    height: 345px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .carousels__picture-container {
+    width: 345px;
+    height: 345px;
+  }
+  .carousels__wrapper {
+    width: 350px !important;
+  }
 }
 
 .carousels__wrapper {

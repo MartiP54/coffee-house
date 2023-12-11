@@ -209,13 +209,6 @@ REFRESH_ICON.addEventListener('click', refreshDisplay);
 
   // category drink paganation end//
 
-
-
-
-
-
-
-
  // pop-up start//
  const DRINK_CARD = document.getElementById("menu__active");
  const POP_UP_IMAGE = document.querySelector('.pop_up-image');
@@ -306,6 +299,7 @@ POP_UP_TABS.forEach((tabs) => {
             t.classList.remove('tabs__item-active');
         });
         e.currentTarget.classList.add('tabs__item-active');
+        console.log(e.currentTarget.lastChild);
     });
 });
 

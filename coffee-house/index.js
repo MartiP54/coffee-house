@@ -62,16 +62,18 @@ let x_start_position;
 let x_end_position;
 let swipe_carousel ='';
 let control_bar_percent = 0;
-let valueTime = 0;
 let offset = 0;
 let timerId;
+let carusel_item_with = 480;
+let control_bar_percent_stop;
+
 
 
     const move_left = () => {
         document.documentElement.style.setProperty('--my-start-width', `${offset}px`);
-        offset = offset + 480;
+        offset = offset + carusel_item_with;
         if (offset > 0) {
-            offset = -960;
+            offset = -carusel_item_with*2;
         }
         document.documentElement.style.setProperty('--my-end-width', `${offset}px`);
         CARUSEL.classList.add("transition-carusel-left");
@@ -84,8 +86,8 @@ let timerId;
 
     const move_right = () => {
         document.documentElement.style.setProperty('--my-start-width', `${offset}px`);
-        offset = offset - 480;
-        if (offset < -960) {
+        offset = offset - carusel_item_with;
+        if (offset < -carusel_item_with*2) {
             offset = 0;
         }
         document.documentElement.style.setProperty('--my-end-width', `${offset}px`);
@@ -97,6 +99,24 @@ let timerId;
         document.documentElement.style.setProperty('--control-width', `${control_bar_percent}px`);
     }
 
+    const media1280 = window.matchMedia('(min-width: 768px)');
+    media1280.addListener(Destop);
+    Destop(media1280);
+    function Destop(e) {
+        if (e.matches) { 
+          carusel_item_with = 480;
+        }
+    }
+    
+    const media380 = window.matchMedia('(max-width: 550px)');
+    media380.addListener(Mobile);
+    Mobile(media380);
+    function Mobile(e) {
+        if (e.matches) {
+          console.log('pes');
+          carusel_item_with = 345;
+        }
+    }
     
     BUTTON_RIGHT.addEventListener("click",move_right);
     BUTTON_LEFT.addEventListener("click",move_left);
@@ -132,7 +152,7 @@ let timerId;
           }
         });
       }
-      if (offset == -480) {
+      if (offset == -carusel_item_with) {
         CONTROL_ITEMS.forEach ((e) => {
           if (e.id == 2) {
             e.classList.add('control-active');
@@ -141,7 +161,7 @@ let timerId;
           }
         });
       }
-      if (offset == -960) {
+      if (offset == -carusel_item_with*2) {
         CONTROL_ITEMS.forEach ((e) => {
           if (e.id == 3) {
             e.classList.add('control-active');
@@ -214,7 +234,7 @@ CARUSEL_ITEM_WRAPPER.addEventListener('mouseout',startAutoCarusel);
 CARUSEL_ITEM_WRAPPER.addEventListener('touchstart',stopAutoCarusel);
 CARUSEL_ITEM_WRAPPER.addEventListener('touchend',startAutoCarusel);
 
-let control_bar_percent_stop;
+
 
 function stopAutoCarusel(event) {
   control_bar_percent_stop = control_bar_percent;
@@ -230,3 +250,4 @@ function startAutoCarusel() {
   timer ();
 }
 // stopAutoCarusel end//
+

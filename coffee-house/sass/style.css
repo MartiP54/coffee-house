@@ -136,7 +136,7 @@ h3 {
 .header__menu {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 14px;
+  padding-bottom: 6px;
   align-items: center;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -648,8 +648,8 @@ h3 {
   display: flex;
   padding: 16px;
   border-radius: 40px;
-  width: 800px;
-  height: 500px;
+  width: 765px;
+  height: 468px;
   background-color: #E1D4C9;
   z-index: 5;
   cursor: auto;
@@ -717,7 +717,7 @@ h3 {
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
-  gap: 8px;
+  gap: 3px;
   align-self: stretch;
   flex-wrap: wrap;
 }
@@ -743,7 +743,7 @@ h3 {
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
-  gap: 8px;
+  gap: 3px;
   align-self: stretch;
   flex-wrap: wrap;
 }
@@ -763,10 +763,6 @@ h3 {
   align-self: stretch;
 }
 
-.pop_up-price {
-  padding-right: 32px;
-}
-
 .pop_up-alert {
   display: flex;
   padding: 12px 0px;
@@ -782,8 +778,7 @@ h3 {
 }
 
 .info-empty {
-  width: 16px;
-  height: 16px;
+  width: 28px;
 }
 
 .pop_up-button {
@@ -809,6 +804,54 @@ h3 {
   cursor: pointer;
 }
 
+.pop_up-tab_img {
+  fill: #C1B6AD;
+}
+
+.pop_up-tab_img-active {
+  fill: #E1D4C9;
+}
+
+@media screen and (max-width: 800px) {
+  .pop_up-wrapper {
+    width: 655px;
+    height: 590px;
+  }
+  .pop_up-content {
+    width: 326px;
+    gap: 21px;
+  }
+  .pop_up-size {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .pop_up-button {
+    padding: 10px 140px;
+  }
+  .info-empty {
+    width: 43px;
+  }
+  .pop_up-overlay {
+    cursor: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .pop_up-image {
+    display: none;
+  }
+  .pop_up-wrapper {
+    width: 310px;
+    height: 594px;
+  }
+  .pop_up-content {
+    width: 290px;
+    padding: 0;
+    gap: 22px;
+  }
+  .pop_up-button {
+    padding: 10px 133px;
+  }
+}
 #about {
   padding-top: 98px;
 }
@@ -927,7 +970,7 @@ h3 {
 
 .enjoy__video {
   width: 100%;
-  height: 650px;
+  height: 643px;
   object-fit: cover;
   top: 0;
   left: 0;
@@ -1007,6 +1050,9 @@ h3 {
 @media screen and (max-width: 380px) {
   .enjoy__offer {
     padding: 59.5px 16px;
+  }
+  .enjoy__video {
+    height: 552px;
   }
 }
 :root {
@@ -1149,6 +1195,24 @@ h3 {
   }
   .carousels__cart {
     gap: 17px;
+  }
+  .carousels__wrapper {
+    width: 280px;
+    overflow: hidden;
+    height: auto;
+  }
+  .carousels__picture-container {
+    width: 345px;
+    height: 345px;
+  }
+}
+@media screen and (max-width: 499px) {
+  .carousels__picture-container {
+    width: 345px;
+    height: 345px;
+  }
+  .carousels__wrapper {
+    width: 350px !important;
   }
 }
 .carousels__wrapper {
