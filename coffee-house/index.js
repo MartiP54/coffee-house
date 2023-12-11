@@ -209,7 +209,7 @@ let control_bar_percent_stop;
 document.documentElement.style.setProperty('--my-start-width', `${offset}px`);
 function progressBarActiveAnimation () {
   if (control_bar_percent < 40) {
-    control_bar_percent = control_bar_percent + 8;
+    control_bar_percent = control_bar_percent + 2;
     document.documentElement.style.setProperty('--control-width', `${control_bar_percent}px`);
   } else {
     move_right();
@@ -220,10 +220,10 @@ function progressBarActiveAnimation () {
 }
 
 function timer () {
-  timerId = setTimeout(function tick() {
+  timerId = setTimeout(function t() {
     progressBarActiveAnimation();
-    timerId = setTimeout(tick, 1000);
-  }, 1000);
+    timerId = setTimeout(t, 250);
+  }, 250);
 }
 
 timer ();
