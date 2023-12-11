@@ -120,6 +120,9 @@ const  createCardTemplate = (id) => {
     TABS_COFFEE.classList.add('tabs__item-active');
     TABS_TEA.classList.remove('tabs__item-active');
     TABS_DESSERT.classList.remove('tabs__item-active');
+    TABS_COFFEE.firstElementChild.classList.add('icon__box-active');
+    TABS_TEA.firstElementChild.classList.remove('icon__box-active');
+    TABS_DESSERT.firstElementChild.classList.remove('icon__box-active');
     for (let i = 0; i < COFFEE_ARRAY.length ; i++) {
         createCardTemplate(i);
       }
@@ -131,6 +134,9 @@ TABS_TEA.addEventListener("click", () => {
     TABS_TEA.classList.add('tabs__item-active');
     TABS_COFFEE.classList.remove('tabs__item-active');
     TABS_DESSERT.classList.remove('tabs__item-active');
+    TABS_TEA.firstElementChild.classList.add('icon__box-active');
+    TABS_COFFEE.firstElementChild.classList.remove('icon__box-active');
+    TABS_DESSERT.firstElementChild.classList.remove('icon__box-active');
     for (let i = 0; i < TEA_ARRAY.length ; i++) {
         createCardTemplate(i+8);
       }
@@ -142,6 +148,9 @@ TABS_DESSERT.addEventListener("click", () => {
     TABS_DESSERT.classList.add('tabs__item-active');
     TABS_TEA.classList.remove('tabs__item-active');
     TABS_COFFEE.classList.remove('tabs__item-active');
+    TABS_COFFEE.firstElementChild.classList.remove('icon__box-active');
+    TABS_TEA.firstElementChild.classList.remove('icon__box-active');
+    TABS_DESSERT.firstElementChild.classList.add('icon__box-active');
     for (let i = 0; i < DESSERT_ARRAY.length ; i++) {
         createCardTemplate(i+12);
       }
@@ -283,7 +292,6 @@ REFRESH_ICON.addEventListener('click', refreshDisplay);
         addives.classList.remove('tabs__item-active');
         addives.classList.remove('addives-active');
     });
-
     POP_UP_SIZE_S.parentElement.classList.add('tabs__item-active');
     POP_UP_SIZE_M.parentElement.classList.remove('tabs__item-active');
     POP_UP_SIZE_L.parentElement.classList.remove('tabs__item-active');
@@ -297,9 +305,11 @@ POP_UP_TABS.forEach((tabs) => {
     tabs.addEventListener("click", (e) => {
         POP_UP_TABS.forEach((t) => { 
             t.classList.remove('tabs__item-active');
+            t.firstElementChild.classList.remove('pop_up-tab_icon-active');
+            
         });
         e.currentTarget.classList.add('tabs__item-active');
-        console.log(e.currentTarget.lastChild);
+        e.currentTarget.firstElementChild.classList.add('pop_up-tab_icon-active');
     });
 });
 
@@ -310,9 +320,11 @@ POP_UP_ADDITIVES.forEach((addives) => {
     if (e.currentTarget.classList.contains ('tabs__item-active')) {
         e.currentTarget.classList.remove('tabs__item-active');
         e.currentTarget.classList.remove('addives-active');
+        e.currentTarget.firstElementChild.classList.remove('pop_up-tab_icon-active');
     } else {
         e.currentTarget.classList.add('tabs__item-active');
         e.currentTarget.classList.add('addives-active');
+        e.currentTarget.firstElementChild.classList.add('pop_up-tab_icon-active');
     }
     });
 });

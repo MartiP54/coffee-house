@@ -472,6 +472,14 @@ h3 {
   transition: 0.7s;
 }
 
+.icon__box {
+  background: #C1B6AD;
+}
+
+.icon__box-active {
+  background: #E1D4C9;
+}
+
 @media (hover: hover) {
   .tabs__item:hover {
     cursor: pointer;
@@ -852,6 +860,31 @@ h3 {
     padding: 10px 133px;
   }
 }
+.pop_up-tab_icon {
+  color: #403F3D;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  text-align: center;
+  display: flex;
+  padding: 3px 9px 3px 10px;
+  width: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #C1B6AD;
+}
+
+.pop_up-tab_icon-active {
+  background: #E1D4C9;
+}
+
+.pop_up-tabs-item:hover .pop_up-tab_icon {
+  background: #E1D4C9;
+}
+
 #about {
   padding-top: 98px;
 }
