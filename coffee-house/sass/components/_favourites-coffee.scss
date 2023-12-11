@@ -1,3 +1,10 @@
+:root {
+  --my-start-width: 0px;
+  --my-end-width: 0px;
+  --control-width: 0px;
+}
+
+
 #favourites-coffee {
   padding-top: 100px;
 }
@@ -99,8 +106,11 @@
   background: $color-border-light;
 }
 
-#control-active {
+.control-active {
   background:$color-border-dark;
+  width: var(--control-width);
+  height: 4px;
+  border-radius: 100px;
 }
 
 
@@ -160,10 +170,7 @@
   position: relative;
   left: 0px;
 }
-:root {
-  --my-start-width: 0px;
-  --my-end-width: 0px;
-}
+
 
   @keyframes carusel-left {
     from {left: var(--my-start-width);}
