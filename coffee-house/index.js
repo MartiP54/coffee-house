@@ -3,6 +3,8 @@ const hamburgerButton = document.querySelector(".hamburger__button");
 const nav = document.querySelector(".nav");
 const navItem = document.querySelectorAll(".nav__item");
 const body = document.querySelector("body");
+const isMobile = () => window.innerWidth <= 768;
+
 
 hamburgerButton.addEventListener("click", () => {
     if (nav.classList.contains("active")) {
@@ -27,26 +29,26 @@ navItem.forEach((i) => {
 const open_hamburger = () => {
     nav.classList.add("active");
     body.classList.add("noscroll");
-    hamburgerButton.querySelectorAll("span").forEach((line, i) => {
+    if (isMobile()) {
+      hamburgerButton.querySelectorAll("span").forEach((line, i) => {
         if (i == 0) {
-            line.style.transform = "translateY(4px) rotate(45deg)" ;
+          line.style.transform = "translateY(4px) rotate(45deg)" ;
         }
         if (i == 1) {
-            line.style.transform = "translateY(-2px) rotate(-45deg)" ;
+          line.style.transform = "translateY(-2px) rotate(-45deg)" ;
         }
-    });
-};
+      });
+    }
+  };
 
 const close_hamburger = () => {
-    setTimeout(() => {
-        nav.classList.remove("active");
-        body.classList.remove("noscroll");
-    }, );
-
+  if (isMobile()) {
+    nav.classList.remove("active");
+    body.classList.remove("noscroll");
     hamburgerButton.querySelectorAll("span").forEach((line) => {
-        line.style.transform = "";
-       
+      line.style.transform = "";
     });
+  }
 };
 // hamburger_menu end //
 
@@ -113,7 +115,6 @@ let control_bar_percent_stop;
     Mobile(media380);
     function Mobile(e) {
         if (e.matches) {
-          console.log('pes');
           carusel_item_with = 345;
         }
     }
