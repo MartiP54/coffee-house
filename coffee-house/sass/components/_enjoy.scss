@@ -99,8 +99,12 @@
   }
  }
 
-
-@media screen and (max-width: 380px) {
+ @media screen and (max-width: 510px) {
+  .enjoy__offer {
+    padding: 59.5px 16px;
+  }
+}
+@media screen and (max-width: 450px) {
   .enjoy__offer {
     padding: 59.5px 16px;
   }
